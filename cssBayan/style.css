@@ -1,1 +1,78 @@
+body {
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
 
+h1 {
+    margin: 16px auto;
+    text-align: center;
+
+}
+
+
+.mem {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    width: 80%;
+}
+
+section {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.bayan {
+    margin: 20px auto;
+}
+
+.bayan-input {
+    appearance: none;
+    height: 0;
+    width: 0;
+
+}
+
+.bayan-title {
+    display: block;
+    cursor: pointer;
+    color: #f5f6f7;
+    margin-top: -20px;
+}
+
+.bayan-img {
+    display: none;
+
+}
+
+.bayan-item {
+    margin: 0;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.bayan-input:checked~.bayan-img {
+    display: block;
+}
+
+
+
+
+p {
+    font-family: Tahoma;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.img-mem {
+    text-align: center;
+}
+.bayan label:before {
+  content: '+';
+  font-weight: bolder;
+  float: right;
+}
+.bayan input:checked+label:before {
+  content: 'x';
+}
