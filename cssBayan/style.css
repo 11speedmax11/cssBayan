@@ -13,6 +13,7 @@ h1 {
 img {
     max-width: 90%;
 }
+
 .mem {
     display: inline-block;
     margin: 0;
@@ -26,39 +27,59 @@ section {
 }
 
 .bayan {
-    margin: 20px auto;
+    max-width: 80%;
+    margin: 0 auto;
+
 }
 
 .bayan-input {
-    appearance: none;
-    height: 0;
-    width: 0;
+    display: none;
+
 
 }
 
 .bayan-title {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1em;
     cursor: pointer;
-    color: #f5f6f7;
- 
-    padding: 1em;
+    padding: 2rem 0;
 }
 
 
-.bayan-item {
+.bayan-item {    
     margin: 0;
     border-top: 0.05em solid rgb(255, 255, 255);
 }
 
-.bayan-img {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.55s opacity, 0.55s visibility;
+
+.bayan-input:checked~.wrapper {
+    display: block;
 }
 
-.bayan-input:checked~.bayan-img {
+.img-mem {
+    height: 0;
+    margin: 0 auto;
+    opacity: 0;
+    transition-duration: 0.75s;
+}
+
+.bayan-item:hover>.bayan-title>.img-mem,
+.bayan-input:checked+.bayan-title>.img-mem {
+    height: 60rem;
+    padding-top: 1rem;
     opacity: 1;
-    visibility: visible;
+}
+.mem-icon {
+    opacity: 0;
+    transition: 0.5s;
+
+}
+.bayan:hover .mem-icon {
+    opacity: 1;
+  }
+.bayan-input:checked+.bayan-title>.mem-icon {
+    transform: rotate(45deg);
+    transition: 0.5s;
 }
 
 p {
@@ -70,12 +91,4 @@ p {
 .img-mem {
     text-align: center;
 }
-.bayan label:before {
-  content: '+';
-  transition: .3s;
-  float: right;
-}
-.bayan input:checked+label:before {
-  transform: rotate(45deg);
-  
-}
+
